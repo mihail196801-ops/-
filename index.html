@@ -3,60 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Скачущий попугай</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #87CEEB; /* светло-голубой фон */
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .parrot {
-      position: absolute;
-      font-size: 60px;
-      animation: bounce 2s infinite, move-around 8s infinite;
-      user-select: none;
-    }
-
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-40px);
-      }
-    }
-
-    @keyframes move-around {
-      0% {
-        left: 10%;
-        top: 20%;
-      }
-      25% {
-        left: 70%;
-        top: 10%;
-      }
-      50% {
-        left: 60%;
-        top: 60%;
-      }
-      75% {
-        left: 20%;
-        top: 70%;
-      }
-      100% {
-        left: 10%;
-        top: 20%;
-      }
-    }
-  </style>
+  <title>Football Clicker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="parrot">🦜</div>
+  <div class="container">
+    <h1>⚽ Football Clicker</h1>
+    <div class="score">Голы: <span id="score">0</span></div>
+    <div class="timer">Время: <span id="timer">30</span> с</div>
+    <div class="field">
+      <div class="goal left"></div>
+      <div class="goal right"></div>
+      <div id="ball"></div>
+    </div>
+    <p>Кликни на мяч, чтобы забить!</p>
+    <button id="startBtn">Начать игру</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
